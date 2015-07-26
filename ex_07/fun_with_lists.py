@@ -1,8 +1,5 @@
 #!/usr/bin/python
 
-import csv
-import json
-from sys import argv, exit
 from random import uniform
 
 
@@ -84,3 +81,4 @@ Read more at:
 - http://zetcode.com/lang/python/lists/
 - http://www.tutorialspoint.com/python/python_lists.htm
 - https://docs.python.org/2/tutorial/datastructures.html
+"""
