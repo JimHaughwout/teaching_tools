@@ -47,9 +47,13 @@ print fifteen_zeros
 print fifteen_ones
 
 # Let's build a list of random numbers
+# This is a verbose way
 my_list = list()
 for number in range(0,4):
     my_list.append(uniform(1,100))
+
+# This is more concise
+my_list = [uniform(1,100) for i in range(0,4)]
 
 # Applying some basics
 print "List length is %d" % len(my_list)
