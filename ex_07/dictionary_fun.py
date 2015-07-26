@@ -1,4 +1,5 @@
 #!/usr/bin/python
+import csv
 
 # Dictionaries let you 'lookup' an item (the value) the corresponses to 
 # A thing in question (the key)
@@ -33,10 +34,21 @@ phone_book.append({'first_name': 'Jane', 'last_name': 'Doe', 'phone': '301-555-2
 for entry in phone_book:
     print "%s's number is %s" % (entry['first_name'], entry['phone'])
 
+print phone_book[0].keys()
+
+
 # This will be really useful later
+with open('phone_book.csv', 'w') as target:
+    field_names = phone_book[0].keys()
+    writer = csv.DictWriter(target, field_names)
+    writer.writeheader()
+    for entry in phone_book:
+        writer.writerow(entry)
+
 
 """
 Read more:
 - https://docs.python.org/2/tutorial/datastructures.html#dictionaries
 - http://www.tutorialspoint.com/python/python_dictionary.htm
 - http://www.dotnetperls.com/dictionary-python
+"""
